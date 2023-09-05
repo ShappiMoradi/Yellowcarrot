@@ -1,0 +1,109 @@
+﻿<Window x:Class="YellowCarrot.ChangeTagsWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:YellowCarrot"
+        mc:Ignorable="d"
+        Title="ChangeTagsWindow" ResizeMode="NoResize" Height="450" Width="800">
+
+
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+
+        </Grid.RowDefinitions>
+
+        <Border CornerRadius="10" Grid.RowSpan="9" 
+        Grid.ColumnSpan="9"
+        Margin="0,0,-4,0">
+            <Border.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="0.103"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Border.RenderTransform>
+            <Border.Background>
+                <LinearGradientBrush>
+                    <GradientStop Color="BurlyWood" Offset="0"/>
+                    <GradientStop Color="OrangeRed" Offset="1"/>
+                </LinearGradientBrush>
+            </Border.Background>
+        </Border>
+
+        <ComboBox
+            x:Name="cbxAllTags"
+            Background="Wheat"
+            Grid.ColumnSpan="5"
+            Grid.Column="2"
+            IsEditable="True"
+            Text="Select Tag"
+            VerticalContentAlignment="Center"
+            HorizontalContentAlignment="Center" 
+            IsReadOnly="True"
+            Margin="21,48,67,0" 
+            Grid.RowSpan="2"/>
+
+        <Button
+            x:Name="btnChangeTags"
+            Grid.Column="3"
+            Grid.ColumnSpan="3"
+            Height="30"
+            Content="Change Tag" 
+            Background="Wheat"
+            Margin="10,9,78,9"
+            Grid.Row="5" Click="btnChangeTags_Click" 
+            />
+
+        <ListView
+            x:Name="lvlCurrentTags"
+            Grid.Row="2"
+            Grid.Column="2"
+            Grid.ColumnSpan="5"
+            Grid.RowSpan="3"
+            Background="Wheat" 
+            Margin="22,24,67,24"
+            />
+
+        <Button
+            x:Name="btnExit"
+            Background="Wheat"
+            Grid.Row="6"
+            Grid.Column="3"
+            Grid.ColumnSpan="3"
+            Height="30"
+            Content="Exit" 
+            Margin="11,10,78,9"
+            Click="btnExit_Click"/>
+            
+            
+            
+
+
+
+
+
+
+    </Grid>
+</Window>

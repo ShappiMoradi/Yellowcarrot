@@ -1,0 +1,206 @@
+﻿<Window x:Class="YellowCarrot.DetailsWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:YellowCarrot"
+        mc:Ignorable="d"
+        Title="DetailsWindow" ResizeMode="NoResize" Height="450" Width="800">
+
+    <Grid>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+
+        </Grid.RowDefinitions>
+
+        <Border CornerRadius="10" Grid.RowSpan="9"
+                Grid.ColumnSpan="9" 
+                Margin="0,0,-4,0">
+            <Border.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="0.103"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Border.RenderTransform>
+            <Border.Background>
+                <LinearGradientBrush>
+                    <GradientStop Color="BurlyWood" Offset="0"/>
+                    <GradientStop Color="OrangeRed" Offset="1"/>
+                </LinearGradientBrush>
+            </Border.Background>
+        </Border>
+        <TextBox
+       x:Name="txbRecipeName" 
+       Background="Wheat"
+       Grid.Column="3"
+       TextAlignment="Center"
+       Margin="25,24,0,34"
+       Grid.ColumnSpan="3" Grid.RowSpan="2" Grid.Row="1"/>
+
+        <ListView 
+        x:Name="lvlIngridiens"
+        Background="Wheat"
+        Grid.Column="3"
+        Grid.ColumnSpan="3" 
+        Grid.RowSpan="6"
+        Grid.Row="3" 
+        Margin="57,0,32,48"
+        SelectionChanged="lvlIngridiens_SelectionChanged"/>
+
+        <Button
+            x:Name="btnExit"
+            Background="Wheat"
+            Grid.Row="8"
+            Content="Exit" Grid.Column="7" 
+            Grid.ColumnSpan="2"
+            Margin="45,0,44,24" 
+            Click="btnExit_Click"/>
+
+        <Label
+            Content="Ingridients"
+            Foreground="Wheat"
+            Grid.Column="4"
+            FontSize="20"
+            HorizontalAlignment="Left"
+            VerticalAlignment="Bottom" 
+            Grid.ColumnSpan="2"
+            Margin="11,0,0,1"
+            FontStyle="Italic"
+            FontWeight="Medium"
+            />
+
+        <TextBox
+            x:Name="txbIngridientName"
+            Background="Wheat"
+            Grid.Row="3"
+            Grid.Column="1"
+            Height="30"
+            Grid.ColumnSpan="3" 
+            Margin="74,8,60,10"/>
+
+        <Label
+            Content="Quantity"
+            Grid.Column="5"
+            Grid.Row="3"
+            FontSize="11"
+            HorizontalAlignment="Left"
+            VerticalAlignment="Bottom" 
+            FontStyle="Italic"
+            FontWeight="Medium"
+            Grid.ColumnSpan="2" 
+            Margin="62,0,0,12"
+            />
+
+        <TextBox
+            x:Name="txbIngridientQuantity"
+            Background="Wheat"
+            Grid.Row="3"
+            Grid.Column="5"
+            Height="30"
+            Grid.ColumnSpan="2"
+            Margin="62,41,27,25" 
+            Grid.RowSpan="2"/>
+
+        <Button
+            x:Name="btnRecipeTags"
+            Grid.Row="4"
+            Background="Wheat"
+            Grid.Column="2"
+            Content="Recipe Tags"
+            FontSize="13"
+            Height="35" Grid.ColumnSpan="2"
+            Margin="10,3,79,10"
+            Click="btnRecipeTags_Click" />
+
+        <Button
+            x:Name="btnRemoveIngridient"
+            Background="Wheat"
+            Content="Remove Ingrident"
+            Grid.Row="5"
+            VerticalAlignment="Top"
+            Grid.Column="2"
+            FontSize="13"
+            Height="35" 
+            Grid.ColumnSpan="2" 
+            Margin="6,35,56,0" 
+            Grid.RowSpan="2" 
+            Click="btnRemoveIngridient_Click"/>
+
+        <Button
+            x:Name="btnChangeIngridient"
+            Background="Wheat"
+            Grid.Row="4"
+            VerticalAlignment="Bottom"
+            Grid.Column="2"
+            Content="Change Ingrident"
+            FontSize="13"
+            Height="35" 
+            Grid.ColumnSpan="2" 
+            Margin="10,0,60,18" 
+            Grid.RowSpan="2"
+            Click="btnChangeIngridient_Click" />
+
+        <Button
+            x:Name="btnUnlock"
+            Content="Unlock"
+            Background="Wheat"
+            Grid.Row="5"
+            Grid.Column="5"
+            FontSize="13"
+            Height="35" Grid.ColumnSpan="2"
+            Margin="62,3,27,10"
+            Click="btnUnlock_Click"/>
+
+        <Button
+            x:Name="btnSave"
+            Background="Wheat"
+            Grid.Row="8"
+            Grid.Column="4"
+            Content="Save"
+            FontSize="13"
+            Height="35" 
+            Margin="0,5,0,8" 
+            Click="btnSave_Click"/>
+
+        <Button
+            x:Name="btnInfo"
+            Background="Wheat"
+            Grid.Row="7"
+            Content="Info"
+            FontSize="13" 
+            Grid.ColumnSpan="2" 
+            Margin="64,46,25,22"
+            Grid.RowSpan="2" Click="btnInfo_Click" />
+
+
+
+
+
+    </Grid>
+
+
+
+
+</Window>
